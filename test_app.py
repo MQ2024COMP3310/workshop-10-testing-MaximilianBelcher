@@ -1,4 +1,5 @@
 import unittest
+import re
 from flask import current_app
 from project import create_app, db
 from project.models import User
@@ -36,7 +37,8 @@ class TestWebApp(unittest.TestCase):
 
     def test_no_access_to_profile(self):
         # TODO: Check that non-logged-in user should be redirected to /login
-        assert False
+        response = self.client.get('/profile')
+        assert response.status_code == 302
 
     def test_register_user(self):
         response = self.client.post('/signup', data = {
@@ -80,7 +82,9 @@ class TestWebApp(unittest.TestCase):
         assert response.status_code == 200 
 
     def test_xss_vulnerability(self):
-        # TODO: Can we store javascript tags in the username field?
-        assert False
-
-
+        response = self.client.post('/signup', data = {
+            'email' : re.escape('user@test.com"; drop table user; -- '),
+            'name' : re.escape('test user'),
+            'password' : re.escape('test123')
+        }, follow_redirects = True)
+        assert response.status_code == 200
