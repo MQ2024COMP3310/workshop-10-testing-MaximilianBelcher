@@ -57,8 +57,19 @@ You can now browse to the url http://localhost:8001/ and you should see the home
 ![Welcome page](WelcomePage.jpg)
 
 ### Task 1
+What is the name of that branch?
 main
+What is the github command that you use to find out which branches there are in the repository?
 git branch
 
 ### Task 2
-this is wrong eee
+What issues arose?
+Failed to push to the repository because the remote work contains work that is not stored locally.
+To fix, we can integrate the remote changes with 'git pull'.
+
+### Task 3
+What commands did you need to use to do these?
+git branch dev
+git branch test
+git branch prod
+How do you know which branch is your working branch?
