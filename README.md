@@ -48,7 +48,7 @@ You should see that there are no users in the database.
 
 You can run the website by typing:
 
-- python run.py
+- python3 run.py
 
 (If you are using a Mac you may need to type python3 run.py).
 
