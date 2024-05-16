@@ -56,9 +56,4 @@ You can now browse to the url http://localhost:8001/ and you should see the home
 
 ![Welcome page](WelcomePage.jpg)
 
-### Task 1
-main
-git branch
-
-### Task 2
-this is wrong eee
+# Dev Branch Push
