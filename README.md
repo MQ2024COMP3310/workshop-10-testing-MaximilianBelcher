@@ -56,8 +56,9 @@ You can now browse to the url http://localhost:8001/ and you should see the home
 
 ![Welcome page](WelcomePage.jpg)
 
-### Taskk 1
+### Task 1
 main
 git branch
 
 ### Task 2
+update
