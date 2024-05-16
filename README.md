@@ -73,3 +73,4 @@ git branch dev
 git branch test
 git branch prod
 How do you know which branch is your working branch?
+Highlighted in green when using the command 'git branch'.
